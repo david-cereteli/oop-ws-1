@@ -2,8 +2,8 @@ public class Range {
     private int start;
     private int end;
 
-    public Range() {
-    }
+    //public Range() {
+    //}
 
     public Range(int start, int end) {
         if (start <= end) {
@@ -15,6 +15,15 @@ public class Range {
         }
     }
 
+    //public Range(int start, int end) {
+    //    this.start = 0;
+    //    this.end = Math.abs(start - end);
+    //}
+
+    public Range(int range) {
+        this(0, range);
+    }
+
     public int getLength() {
         return end - start;
     }
@@ -23,7 +32,7 @@ public class Range {
         return start;
     }
 
-    public void setStart(int start) {
+    private void setStart(int start) {
         if (start <= this.end) {
             this.start = start;
         }
@@ -33,7 +42,7 @@ public class Range {
         return end;
     }
 
-    public void setEnd(int end) {
+    private void setEnd(int end) {
         if (this.start <= end) {
             this.end = end;
         }
