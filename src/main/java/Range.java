@@ -15,6 +15,10 @@ public class Range {
         }
     }
 
+    public int getLength() {
+        return end - start;
+    }
+
     public int getStart() {
         return start;
     }
@@ -37,6 +41,6 @@ public class Range {
 
     @Override
     public String toString() {
-        return String.format("Start: %d End: %d", this.start, this.end);
+        return String.format("Start: %d End: %d Length:%d", getStart(), getEnd(), getLength());
     }
 }
